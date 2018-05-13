@@ -61,6 +61,8 @@ the most probable class: 'traffic_light'(920)
 ![](examples/uberfatalcrashvid970_0_0_920_traffic_light_0.105_gradcam.jpg)
 ![](examples/uberfatalcrashvid970_0_0_920_traffic_light_0.105_segmented.jpg)
 
+The below are two predicted classes which are related bicycles.
+
 the 6-th probable class: 'motor_scooter'(670)
 
 ![](examples/uberfatalcrashvid970_0_5_670_motor_scooter_0.027_gradcam.jpg)
@@ -72,7 +74,6 @@ the 19-th probable class: 'moped'(665)
 ![](examples/uberfatalcrashvid970_0_18_665_moped_0.010_segmented.jpg)
 
 Lines below are the top 20 classes predicted VGG16 model.
-
 As you can see, VGG16 fails to detect bicycle related objects from this picture(though `motor_scooter` is detected with low probability).
 
 ```text
@@ -99,11 +100,11 @@ As you can see, VGG16 fails to detect bicycle related objects from this picture(
 ```
 
 I think Uber has built in-house classification models for self-driving cars. 
-But detecting persons on roads could be difficult only by visible light especially at night. 
+But detecting persons on roads especially at night could be difficult only by visible light. 
 As reported in [Report: Uber's Self-Driving Car Sensors Ignored Cyclist In Fatal Accident](https://gizmodo.com/report-ubers-self-driving-car-sensors-ignored-cyclist-1825832504)
 it seems a woman crossing the street on a bicycle was ignored.
 
-Detector using an infrared camera is also necessary to avoid such tragic accidents.
+[Detectors using an infrared camera](https://www.wired.com/story/self-driving-cars-thermal-image-cameras/) are also needed to avoid such tragic accidents.
 
 ## Note
 
