@@ -34,6 +34,8 @@ The following images are saved to the same directory as `path_to_image`:
 
 the most probable class: 'boxer'(242)
 
+The below are original image, image overlaid by Grad-CAM heatmap and segmented image by Grad-CAM heatmap.
+
 ![](examples/cat_dog.png)
 ![](examples/cat_dog_0_242_boxer_0.420_gradcam.png)
 ![](examples/cat_dog_0_242_boxer_0.420_segmented.png)
@@ -108,10 +110,7 @@ Detector using an infrared camera is also necessary to avoid such tragic acciden
 For your information,
 `Grad-CAM++`, a variant of `Grad-CAM`, is presented in [4]. The authors provided their [implementation](https://github.com/adityac94/Grad_CAM_plus_plus). 
 As pointed by [Questions for computing of derivatives](https://github.com/adityac94/Grad_CAM_plus_plus/issues/1),
-their implementation is weird. For example the second derivative(`d2f/dx2`) in [4] is coded like (`(df/dx)^2`),
-though the second derivatives should be computed by [`tf.hessians`](https://www.tensorflow.org/api_docs/python/tf/hessians).
-
-So I am not sure if their experimented results in [4] are correct or not.
+their implementation is weird.
 
 ## References
 
